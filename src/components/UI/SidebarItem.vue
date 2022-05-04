@@ -76,7 +76,8 @@ export default {
 }
 
 .menu__item:hover .menu__content{
-  background-color: #f1f1f1;
+  background-color: #ef562f;
+  color: white;
   border-radius: 0 3px 3px 0;
 }
 

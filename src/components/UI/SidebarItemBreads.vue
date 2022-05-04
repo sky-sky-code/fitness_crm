@@ -26,7 +26,7 @@ export default {
   display: none;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 4px 0px rgba(239, 86, 47);
   padding: 12px 16px;
   z-index: 1;
   transform: translateX(-250px);
@@ -34,7 +34,6 @@ export default {
 }
 
 .sidebar__item__listBreads > li{
-  margin-bottom: 5px;
   text-decoration: none;
 }
 
