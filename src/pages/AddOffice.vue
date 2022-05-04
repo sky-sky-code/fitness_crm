@@ -39,7 +39,14 @@
         <label>Примечание</label>
       </div>
     </div>
-    <button type="button" @click="createOffice()" class="btn btn-dark">Сохранить</button>
+    <div class="form__save">
+      <button type="button" @click="createOffice()" class="btn btn-dark">Сохранить</button>
+      <div class="save__response"
+           :class="{save__response_success: success, save__response_error: error}"
+      >
+        <span class="response__text">response</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -58,14 +65,20 @@ export default {
         facebook_url: null,
         instagram_url: null,
         description: null
-      }
+      },
+      success: false,
+      error: false
     }
   },
   methods: {
     async createOffice(){
       try {
-       await axios.post('http://127.0.0.1:8001/office', this.dataOffice)
+       await axios.post('http://127.0.0.1:8000/office', this.dataOffice)
+        this.error = false
+        this.success = true
       }catch (e){
+        this.success = false
+        this.error = true
         console.log(e)
       }
     }
@@ -93,6 +106,36 @@ export default {
 .form-control:focus{
   box-shadow: 0 2px 3px rgb(230, 28, 35);
   border: rgb(230, 28, 35);
+}
+
+.form__save{
+  display: flex;
+  justify-content: space-between;
+}
+
+.save__response{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  height: 36px;
+  width: 30%;
+  opacity: 0;
+}
+
+.save__response_success{
+  background-color: #40b73a;
+  opacity: 1;
+}
+
+.save__response_error{
+  background-color: #ef562f;
+  opacity: 1;
+}
+
+.response__text{
+  margin-right: 15px;
 }
 
 .btn-dark:hover, .btn-dark:focus, .btn-dark:active {
