@@ -1,7 +1,9 @@
 <template>
   <div class="office">
     <div class="office__add">
-      <button type="button" class="btn btn-success">Добавить Фелиал</button>
+      <router-link to="/office/add">
+        <button type="button" class="btn btn-success">Добавить Фелиал</button>
+      </router-link>
     </div>
     <div class="office__table">
       <table class="table">
@@ -39,7 +41,7 @@
 
 <script>
 export default {
-
+  name: "Office"
 }
 </script>
 
