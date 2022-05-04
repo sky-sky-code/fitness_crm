@@ -30,7 +30,7 @@ export default {
   padding: 12px 16px;
   z-index: 1;
   transform: translateX(-250px);
-  transition: 0.8s;
+  transition: 0.3s;
 }
 
 .sidebar__item__listBreads > li{

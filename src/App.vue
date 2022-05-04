@@ -1,12 +1,15 @@
 <template>
   <div class="app">
-    <Sidebar/>
+    <sidebar/>
+    <div class="section">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 
 <script>
-import Sidebar from '@/components/UI/Sidebar'
+import Sidebar from "@/components/UI/Sidebar";
 export default {
   components: {Sidebar}
 }
@@ -17,7 +20,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-size: 14px;
 }
 
 li {
@@ -29,7 +32,13 @@ ul {
 }
 
 .app{
+  width: 100%;
   display: flex;
+}
+
+.section{
+  width:100%;
+  padding:40px;
 }
 
 </style>
