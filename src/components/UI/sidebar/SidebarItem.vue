@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import SidebarItemBreads from "@/components/UI/SidebarItemBreads";
+import SidebarItemBreads from "@/components/UI/sidebar/SidebarItemBreads";
 export default {
   name: "Sidebar",
   components: {SidebarItemBreads},
@@ -65,15 +65,32 @@ export default {
 <style>
 
 .menu__item{
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  max-height: 40px;
+  overflow: hidden;
+  height: auto;
+  transition: all 0.2s;
 }
 
 .menu__content{
   display: flex;
   justify-content: left;
   padding: 8px 12px;
-  transition: all 0.2s;
+  max-height: 40px;
 }
+
+.menu__icon{
+  font-size: 16px;
+  margin-right: 10px;
+  transition: all 0.5s;
+}
+
+.menu__item:hover{
+  max-height: 100%;
+  box-shadow: 0px 3px 4px 0px rgba(239, 86, 47);
+}
+
+.menu__item:hover .menu__listBreads{transform: translateX(0px);}
 
 .menu__item:hover .menu__content{
   background-color: #ef562f;
@@ -81,29 +98,14 @@ export default {
   border-radius: 0 3px 3px 0;
 }
 
-.menu__icon{
-  transition: all 0.2s;
-}
-
 .menu__item:hover .menu__icon{
   margin-left: 10px;
-}
-
-.menu__item:hover .menu__listBreads{display: block; transform: translateX(0)}
-
-.menu__icon{
-  font-size: 16px;
-  margin-right: 10px;
 }
 
 .menu__title{
   font-size: 16px;
 }
 
-.menu__item_active{
-  background-color: #97229FFC;
-  color: #fff;
-}
 
 
 </style>

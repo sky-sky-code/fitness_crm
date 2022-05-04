@@ -9,7 +9,7 @@
 
 
 <script>
-import Sidebar from "@/components/UI/Sidebar";
+import Sidebar from "@/components/UI/sidebar/Sidebar";
 export default {
   components: {Sidebar}
 }
@@ -26,9 +26,11 @@ export default {
 li {
   list-style-type: none; /* Убираем маркеры */
 }
-ul {
-  margin-left: 0; /* Отступ слева в браузере IE и Opera */
-  padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+ul li{
+  padding: 0;
+  margin-bottom: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 
 .app{

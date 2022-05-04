@@ -23,24 +23,20 @@ export default {
 <style>
 
 .menu__listBreads{
-  display: none;
-  background-color: #f9f9f9;
+  border-radius: 0 3px 3px 0;
   min-width: 160px;
-  box-shadow: 0px 3px 4px 0px rgba(239, 86, 47);
   padding: 12px 16px;
-  z-index: 1;
   transform: translateX(-250px);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
-.sidebar__item__listBreads > li{
+.sidebar__item__listBreads li{
+  margin-bottom: 5px;
+}
+
+.sidebar__item__listBreads  li a{
   text-decoration: none;
+  color: #ef562f;
 }
-
-/*li{*/
-/*  margin-left: 5px;*/
-/*}*/
-
-
 
 </style>

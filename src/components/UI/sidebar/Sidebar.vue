@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SidebarItem from "@/components/UI/SidebarItem";
+import SidebarItem from "@/components/UI/sidebar/SidebarItem";
 export default {
   components: {SidebarItem},
   data() {
