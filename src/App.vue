@@ -32,9 +32,13 @@ ul li{
   border: 0;
   vertical-align: baseline;
 }
-.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+
+.btn:focus .btn-dark:focus,{
+  box-shadow: none;
+}
+
+.btn-dark:hover, .btn-dark:active {
   box-shadow: 0 2px 3px rgb(230, 28, 35);
-  border: rgb(230, 28, 35);
 }
 
 
