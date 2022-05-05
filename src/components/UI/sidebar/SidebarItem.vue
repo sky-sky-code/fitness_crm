@@ -36,8 +36,7 @@ export default {
         // },
         {
           name: 'Фелиалы', icon: 'building',
-          listBreads: [{name: 'Филиалы', route: '/office'}]
-            // {name: 'Залы', route: ''}]
+          listBreads: [{name: 'Филиалы', route: '/office'}, {name: 'Залы', route: '/gymroom'}]
         },
         // {
         //   name: 'Напрвления', icon: 'signs-post',

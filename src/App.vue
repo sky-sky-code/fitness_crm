@@ -23,11 +23,18 @@ export default {
   font-size: 14px;
 }
 
+a{
+  text-decoration: none !important;
+  font-size: 14px !important;
+  color: #ef562f !important;
+  font-weight: 500;
+}
+
 li {
   list-style-type: none; /* Убираем маркеры */
 }
 ul li{
-  padding: 0;
+  padding-left: 0;
   margin-bottom: 0;
   border: 0;
   vertical-align: baseline;

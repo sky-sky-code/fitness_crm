@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from "vue-router";
 import Office from "@/pages/Office";
 import AddOffice from "@/pages/AddOffice";
 import DetailOffice from "@/pages/DetailOffice";
+import GymRoom from "@/pages/GymRoom";
 
 const routes = [
     {
@@ -17,6 +18,10 @@ const routes = [
         component: DetailOffice,
         name: 'officeDetail',
         props: true
+    },
+    {
+        path: '/gymroom',
+        component: GymRoom
     }
 ]
 
