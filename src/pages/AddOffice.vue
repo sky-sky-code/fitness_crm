@@ -44,7 +44,7 @@
       <div class="save__response"
            :class="{save__response_success: success, save__response_error: error}"
       >
-        <span class="response__text">response</span>
+        <span class="response__text">{{ this.responseText }}</span>
       </div>
     </div>
   </div>
@@ -67,21 +67,36 @@ export default {
         description: null
       },
       success: false,
-      error: false
+      error: false,
+      responseText: ''
     }
   },
   methods: {
     async createOffice(){
       try {
-       await axios.post('http://127.0.0.1:8000/office', this.dataOffice)
+       await axios.post('http://127.0.0.1:8001/office', this.dataOffice)
         this.error = false
         this.success = true
+        this.responseText = "Успешно"
+        setTimeout(this.hiddenResponse, 2000)
       }catch (e){
         this.success = false
         this.error = true
+        this.responseText = "Ошибка"
+        setTimeout(this.hiddenResponse, 2000)
         console.log(e)
       }
+    },
+    hiddenResponse(){
+      if (this.success === true){
+        this.success = false
+      }else{
+        this.error = false
+      }
     }
+  },
+  mounted() {
+    this.hiddenResponse()
   }
 }
 </script>
@@ -121,26 +136,25 @@ export default {
   border-radius: 5px;
   height: 36px;
   width: 30%;
+  transform: translateX(100%);
   opacity: 0;
+  transition: all 0.5s;
 }
 
 .save__response_success{
   background-color: #40b73a;
   opacity: 1;
+  transform: translateX(0px);
 }
 
 .save__response_error{
   background-color: #ef562f;
   opacity: 1;
+  transform: translateX(0px);
 }
 
 .response__text{
   margin-right: 15px;
-}
-
-.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
-    box-shadow: 0 2px 3px rgb(230, 28, 35);
-    border: rgb(230, 28, 35);
 }
 
 </style>

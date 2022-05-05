@@ -32,6 +32,11 @@ ul li{
   border: 0;
   vertical-align: baseline;
 }
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+  box-shadow: 0 2px 3px rgb(230, 28, 35);
+  border: rgb(230, 28, 35);
+}
+
 
 .app{
   width: 100%;
@@ -40,6 +45,7 @@ ul li{
 
 .section{
   width:100%;
+  overflow: hidden;
   padding:40px;
 }
 
