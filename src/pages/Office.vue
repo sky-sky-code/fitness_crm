@@ -18,7 +18,9 @@
         <tbody>
         <tr v-for="(officeItem, index) of dataOffice" :key="index">
           <th scope="row">{{ index + 1 }}</th>
-          <td>{{ officeItem.name }}</td>
+          <td>
+            <router-link :to="{name: 'officeDetail', params: {officeUid: officeItem.uid}}">{{ officeItem.name }}</router-link>
+          </td>
           <td>{{ officeItem.address }}</td>
           <td>{{ officeItem.phone }}</td>
         </tr>

@@ -118,11 +118,6 @@ export default {
   margin: 20px 0;
 }
 
-.form-control:focus{
-  box-shadow: 0 2px 3px rgb(230, 28, 35);
-  border: rgb(230, 28, 35);
-}
-
 .form__save{
   display: flex;
   justify-content: space-between;

@@ -33,12 +33,22 @@ ul li{
   vertical-align: baseline;
 }
 
-.btn:focus .btn-dark:focus,{
-  box-shadow: none;
+.btn-orange{
+  background-color: rgb(230, 28, 35) !important;
+  color: white !important;
+}
+
+.btn-orange:hover, .btn-orange:active {
+  box-shadow: 0 2px 3px rgb(0, 0, 0);
 }
 
 .btn-dark:hover, .btn-dark:active {
   box-shadow: 0 2px 3px rgb(230, 28, 35);
+}
+
+.form-control:focus{
+  box-shadow: 0 2px 3px rgb(230, 28, 35) !important;
+  border-color: #fff !important;
 }
 
 
