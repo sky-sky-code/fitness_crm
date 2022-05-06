@@ -14,8 +14,8 @@
       <input type="text" v-model="dataOffice.phone" class="form-control">
     </div>
     <div class="detail__button">
-      <button @click="updateDetailOffice" class="btn btn-dark">Сохранить</button>
-      <button @click="deleteDetailOffice" class="btn btn-orange">Удалить</button>
+      <ButtonDark @click="updateDetailOffice">Сохранить</ButtonDark>
+      <ButtonRed @click="deleteDetailOffice">Удалить</ButtonRed>
     </div>
   </div>
   </div>
@@ -23,9 +23,12 @@
 
 <script>
 import axios from "axios";
+import ButtonDark from "@/components/UI/ButtonDark";
+import ButtonRed from "@/components/UI/ButtonRed";
 
 export default {
   name: "DetialOffice",
+  components: {ButtonRed, ButtonDark},
   props: ['officeUid'],
   data(){
     return{

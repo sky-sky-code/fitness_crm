@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="form__save">
-      <button type="button" @click="createOffice()" class="btn btn-dark">Сохранить</button>
+      <ButtonDark @click="createOffice">Сохранить</ButtonDark>
       <div class="save__response"
            :class="{save__response_success: success, save__response_error: error}"
       >
@@ -52,8 +52,10 @@
 
 <script>
 import axios from 'axios';
+import ButtonDark from "@/components/UI/ButtonDark";
 export default {
   name: 'AddOffice',
+  components: {ButtonDark},
   data(){
     return{
       dataOffice: {

@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory} from "vue-router";
-import Office from "@/pages/Office";
-import AddOffice from "@/pages/AddOffice";
-import DetailOffice from "@/pages/DetailOffice";
+import Office from "@/pages/office/Office";
+import AddOffice from "@/pages/office/AddOffice";
+import DetailOffice from "@/pages/office/DetailOffice";
 import GymRoom from "@/pages/GymRoom";
 
 const routes = [
