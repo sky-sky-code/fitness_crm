@@ -40,6 +40,24 @@ ul li{
   vertical-align: baseline;
 }
 
+.office__detail{
+  width: 50%;
+}
+
+.detail__item{
+  display: flex;
+  justify-content: space-around;
+}
+
+.detail__item .form-label{
+  width: 25%;
+}
+
+.detail__button{
+  display: flex;
+  justify-content: space-between;
+}
+
 .form-control:focus{
   box-shadow: 0 2px 3px rgb(230, 28, 35) !important;
   border-color: #fff !important;

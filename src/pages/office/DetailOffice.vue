@@ -72,21 +72,4 @@ export default {
 
 <style scoped>
 
-.office__detail{
-  width: 50%;
-}
-
-.detail__item{
-  display: flex;
-  justify-content: space-around;
-}
-
-.detail__item .form-label{
-  width: 25%;
-}
-
-.detail__button{
-  display: flex;
-  justify-content: space-between;
-}
 </style>
