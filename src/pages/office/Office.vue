@@ -5,7 +5,11 @@
         <ButtonDark>Добавить Фелиал</ButtonDark>
       </router-link>
     </div>
-    <TableOrange :nameData="nameDataTable" :outputData="outputDataTable" :dataTable="dataOffice"></TableOrange>
+    <TableOrange
+        :nameLink="nameDetail"
+        :nameData="nameDataTable"
+        :outputData="outputDataTable"
+        :dataTable="dataOffice"></TableOrange>
   </div>
 </template>
 
@@ -20,7 +24,8 @@ export default {
     return{
       dataOffice:[],
       nameDataTable: ['Название', "Адрес", "Телефон"],
-      outputDataTable: ['name', 'address', 'phone']
+      outputDataTable: ['name', 'address', 'phone'],
+      nameDetail: 'officeDetail'
     }
   },
   methods: {

@@ -29,7 +29,7 @@ import ButtonRed from "@/components/UI/ButtonRed";
 export default {
   name: "DetialOffice",
   components: {ButtonRed, ButtonDark},
-  props: ['officeUid'],
+  props: ['uid'],
   data(){
     return{
       dataOffice: {}
@@ -38,7 +38,7 @@ export default {
   methods:{
     async getDetailOffice(){
       try{
-        const response = await axios.get(`http://localhost:8001/office/${this.$route.params.officeUid}`)
+        const response = await axios.get(`http://localhost:8001/office/${this.$route.params.uid}`)
         this.dataOffice = response.data
       }catch (e){
        console.log(e)
@@ -46,7 +46,7 @@ export default {
     },
     async deleteDetailOffice(){
       try{
-        await axios.delete(`http://localhost:8001/office/${this.$route.params.officeUid}`)
+        await axios.delete(`http://localhost:8001/office/${this.$route.params.uid}`)
         this.$router.push('/office');
       }catch (e){
         console.log(e)
@@ -58,7 +58,7 @@ export default {
         delete this.dataOffice.gymrooms
         delete this.dataOffice.purchasedsubscriptions
         console.log(this.dataOffice)
-        await axios.put(`http://localhost:8001/office/${this.$route.params.officeUid}`, this.dataOffice)
+        await axios.put(`http://localhost:8001/office/${this.$route.params.uid}`, this.dataOffice)
       }catch (e){
         console.log(e)
       }

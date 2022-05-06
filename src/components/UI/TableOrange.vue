@@ -9,17 +9,17 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="(officeItem, officeItemIndex) of dataTable" :key="officeItemIndex">
+        <tr v-for="(dataItem, dataIndex) of dataTable" :key="dataIndex">
           <th scope="row">
-            <router-link :to="{name: 'officeDetail', params: {officeUid: officeItem.uid}}">
-              {{ officeItemIndex + 1 }}
+            <router-link :to="{name: nameLink, params: {uid: dataItem.uid}}">
+              {{ dataIndex + 1 }}
             </router-link>
           </th>
           <td v-for="(outputName, outputItemIndex) of outputData" :key="outputItemIndex">
-            <router-link v-if="outputItemIndex==0" :to="{name: 'officeDetail', params: {officeUid: officeItem.uid}}">
-              {{ officeItem[outputName] }}
+            <router-link v-if="outputItemIndex==0" :to="{name: nameLink, params: {uid: dataItem.uid}}">
+              {{ dataItem[outputName] }}
             </router-link>
-            <span v-else>{{ officeItem[outputName] }}</span>
+            <span v-else>{{ dataItem[outputName] }}</span>
           </td>
         </tr>
         </tbody>
@@ -31,7 +31,7 @@
 <script>
 export default {
   name: 'Table',
-  props: {
+ props: {
     dataTable: {
       type: Array
     },
@@ -40,6 +40,9 @@ export default {
     },
     nameData: {
       type: Array
+    },
+    nameLink: {
+      type: String
     }
   }
 }

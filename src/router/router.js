@@ -3,6 +3,7 @@ import Office from "@/pages/office/Office";
 import AddOffice from "@/pages/office/AddOffice";
 import DetailOffice from "@/pages/office/DetailOffice";
 import GymRoom from "@/pages/GymRoom";
+import DetailGymRoom from "@/pages/DetailGymRoom";
 
 const routes = [
     {
@@ -14,7 +15,7 @@ const routes = [
         component: AddOffice
     },
     {
-        path: '/office/:officeUid',
+        path: '/office/:uid',
         component: DetailOffice,
         name: 'officeDetail',
         props: true
@@ -22,6 +23,12 @@ const routes = [
     {
         path: '/gymroom',
         component: GymRoom
+    },
+    {
+        path: '/gymroom/:uid',
+        name: 'GymRoomDetial',
+        component: DetailGymRoom,
+        props: true
     }
 ]
 
