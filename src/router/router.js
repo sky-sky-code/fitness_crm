@@ -4,6 +4,7 @@ import AddOffice from "@/pages/office/AddOffice";
 import DetailOffice from "@/pages/office/DetailOffice";
 import GymRoom from "@/pages/GymRoom";
 import DetailGymRoom from "@/pages/DetailGymRoom";
+import AddGymRoom from "@/pages/AddGymRoom";
 
 const routes = [
     {
@@ -29,6 +30,11 @@ const routes = [
         name: 'GymRoomDetial',
         component: DetailGymRoom,
         props: true
+    },
+    {
+        path: '/gymroom/add',
+        name: 'AddGymRoom',
+        component: AddGymRoom
     }
 ]
 

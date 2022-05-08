@@ -1,5 +1,5 @@
 <template>
-  <div class="office__form">
+  <div class="form">
     <div class="form__name">
       <label class="form-label">Название</label>
       <input type="text" v-model="dataOffice.name" class="form-control"  placeholder="Введите навазние фелиала">
@@ -39,23 +39,17 @@
         <label>Примечание</label>
       </div>
     </div>
-    <div class="form__save">
-      <ButtonDark @click="createOffice">Сохранить</ButtonDark>
-      <div class="save__response"
-           :class="{save__response_success: success, save__response_error: error}"
-      >
-        <span class="response__text">{{ this.responseText }}</span>
-      </div>
-    </div>
+    <FormSave :dataSave="dataOffice" :urlSave="urlSave"/>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
 import ButtonDark from "@/components/UI/ButtonDark";
+import SuccessMessage from "@/components/FormSave";
+import FormSave from "@/components/FormSave";
 export default {
   name: 'AddOffice',
-  components: {ButtonDark},
+  components: {SuccessMessage, ButtonDark, FormSave},
   data(){
     return{
       dataOffice: {
@@ -68,37 +62,8 @@ export default {
         instagram_url: null,
         description: null
       },
-      success: false,
-      error: false,
-      responseText: ''
+      urlSave: 'http://127.0.0.1:8001/office'
     }
-  },
-  methods: {
-    async createOffice(){
-      try {
-       await axios.post('http://127.0.0.1:8001/office', this.dataOffice)
-        this.error = false
-        this.success = true
-        this.responseText = "Успешно"
-        setTimeout(this.hiddenResponse, 2000)
-      }catch (e){
-        this.success = false
-        this.error = true
-        this.responseText = "Ошибка"
-        setTimeout(this.hiddenResponse, 2000)
-        console.log(e)
-      }
-    },
-    hiddenResponse(){
-      if (this.success === true){
-        this.success = false
-      }else{
-        this.error = false
-      }
-    }
-  },
-  mounted() {
-    this.hiddenResponse()
   }
 }
 </script>
@@ -118,40 +83,6 @@ export default {
 
 .form__description{
   margin: 20px 0;
-}
-
-.form__save{
-  display: flex;
-  justify-content: space-between;
-}
-
-.save__response{
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  color: white;
-  border-radius: 5px;
-  height: 36px;
-  width: 30%;
-  transform: translateX(100%);
-  opacity: 0;
-  transition: all 0.5s;
-}
-
-.save__response_success{
-  background-color: #40b73a;
-  opacity: 1;
-  transform: translateX(0px);
-}
-
-.save__response_error{
-  background-color: #ef562f;
-  opacity: 1;
-  transform: translateX(0px);
-}
-
-.response__text{
-  margin-right: 15px;
 }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="gymroom">
       <div class="gymroom_add">
-        <router-link to="">
+        <router-link :to="{name: 'AddGymRoom'}">
           <ButtonDark>Добавить Зал</ButtonDark>
         </router-link>
         <TableOrange

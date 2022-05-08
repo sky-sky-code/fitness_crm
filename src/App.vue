@@ -58,7 +58,7 @@ ul li{
   justify-content: space-between;
 }
 
-.form-control:focus{
+.form-control:focus, .form-select:focus{
   box-shadow: 0 2px 3px rgb(230, 28, 35) !important;
   border-color: #fff !important;
 }
