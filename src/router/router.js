@@ -2,9 +2,9 @@ import {createRouter, createWebHistory} from "vue-router";
 import Office from "@/pages/office/Office";
 import AddOffice from "@/pages/office/AddOffice";
 import DetailOffice from "@/pages/office/DetailOffice";
-import GymRoom from "@/pages/GymRoom";
-import DetailGymRoom from "@/pages/DetailGymRoom";
-import AddGymRoom from "@/pages/AddGymRoom";
+import GymRoom from "@/pages/gymroom/GymRoom";
+import DetailGymRoom from "@/pages/gymroom/DetailGymRoom";
+import AddGymRoom from "@/pages/gymroom/AddGymRoom";
 
 const routes = [
     {
