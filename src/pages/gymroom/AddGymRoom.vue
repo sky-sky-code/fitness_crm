@@ -34,7 +34,6 @@ export default {
         office_id: null,
         description: null
       },
-      selectValue: 'Выбирите Фелилал',
       selectOffice: [],
       urlSave: 'http://127.0.0.1:8001/gymroom'
     }

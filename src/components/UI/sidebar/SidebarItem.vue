@@ -38,10 +38,10 @@ export default {
           name: 'Фелиалы', icon: 'building',
           listBreads: [{name: 'Филиалы', route: '/office'}, {name: 'Залы', route: '/gymroom'}]
         },
-        // {
-        //   name: 'Напрвления', icon: 'signs-post',
-        //   listBreads: [{name: '', route: ''}]
-        // },
+        {
+          name: 'Напрвления', icon: 'signs-post',
+          listBreads: [{name: 'направления', route: '/gymlesson'}]
+        },
         // {
         //   name: 'Персонал', icon: 'user',
         //   listBreads: [{name: 'Тренеры', route: ''}, {name: 'График тренеров'}, {name: 'Администраторы', route: ''}]
