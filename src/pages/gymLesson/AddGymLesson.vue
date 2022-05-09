@@ -1,5 +1,5 @@
 <template>
-  <div class="form">
+  <FormControl :dataSave="dataGymLesson" :urlSave="urlSave">
     <div class="mb-3">
       <label  class="form-label">Название</label>
       <input v-model="dataGymLesson.name" class="form-control" >
@@ -17,15 +17,14 @@
       <br>
       <input v-model="dataGymLesson.duration" type="time" id="time" name="time"/>
     </div>
-    <FormSave :dataSave="dataGymLesson" :urlSave="urlSave"/>
-  </div>
+  </FormControl>
 </template>
 
 <script>
-import FormSave from "@/components/FormSave";
+import FormControl from "@/components/FormControl";
 export default {
   name: "AddGymLesson",
-  components: {FormSave},
+  components: {FormControl},
   data(){
     return{
       dataGymLesson:{
@@ -36,11 +35,6 @@ export default {
       urlSave: 'http://127.0.0.1:8001/gymlesson',
       optionTypeSelect: ['персональное', 'групповое']
 
-    }
-  },
-  methods:{
-    changeOption(event){
-      console.log(this.dataGymLesson)
     }
   }
 }

@@ -1,22 +1,22 @@
 <template>
-  <div class="form">
+  <FormControl :dataSave="dataOffice" :urlSave="urlSave">
     <div class="form__name">
       <label class="form-label">Название</label>
       <input type="text" v-model="dataOffice.name" class="form-control"  placeholder="Введите навазние фелиала">
     </div>
     <div class="form__otherField">
-        <div class="otherFiled__item">
-          <label class="form-label">Адрес</label>
-          <input type="text" v-model="dataOffice.address" class="form-control">
-        </div>
-        <div class="otherFiled__item">
-          <label class="form-label">Сайт</label>
-          <input type="text" v-model="dataOffice.site" class="form-control" >
-        </div>
-        <div class="otherFiled__item">
-          <label class="form-label">Контакты</label>
-          <input type="text" v-model="dataOffice.phone" class="form-control">
-        </div>
+      <div class="otherFiled__item">
+        <label class="form-label">Адрес</label>
+        <input type="text" v-model="dataOffice.address" class="form-control">
+      </div>
+      <div class="otherFiled__item">
+        <label class="form-label">Сайт</label>
+        <input type="text" v-model="dataOffice.site" class="form-control" >
+      </div>
+      <div class="otherFiled__item">
+        <label class="form-label">Контакты</label>
+        <input type="text" v-model="dataOffice.phone" class="form-control">
+      </div>
     </div>
     <div class="form__otherField">
       <div class="otherFiled__item">
@@ -34,22 +34,19 @@
     </div>
     <div class="form__description">
       <div class="form-floating">
-        <textarea class="form-control" v-model="dataOffice.description"
-                  placeholder="Leave a comment here" style="height: 100px"></textarea>
+      <textarea class="form-control" v-model="dataOffice.description"
+                placeholder="Leave a comment here" style="height: 100px"></textarea>
         <label>Примечание</label>
       </div>
     </div>
-    <FormSave :dataSave="dataOffice" :urlSave="urlSave"/>
-  </div>
+  </FormControl>
 </template>
 
 <script>
-import ButtonDark from "@/components/UI/ButtonDark";
-import SuccessMessage from "@/components/FormSave";
-import FormSave from "@/components/FormSave";
+import FormControl from "@/components/FormControl";
 export default {
   name: 'AddOffice',
-  components: {SuccessMessage, ButtonDark, FormSave},
+  components: {FormControl},
   data(){
     return{
       dataOffice: {
