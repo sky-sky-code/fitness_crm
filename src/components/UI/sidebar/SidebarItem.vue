@@ -26,10 +26,11 @@ export default {
         //   name: 'Клиенты', icon: 'users',
         //   listBreads: [{name: 'Клиенты', route: ''}]
         // },
-        // {
-        //   name: 'Абонемент', icon: 'list-check',
-        //   listBreads: [{name: 'Абонименты', route: ''}, {name: 'Проданные Абонименты', route: ''}]
-        // },
+        {
+          name: 'Абонемент', icon: 'list-check',
+          listBreads: [{name: 'Абонименты', route: '/subscription'}]
+            // {name: 'Проданные Абонименты', route: ''}]
+        },
         // {
         //   name: 'Услуги', icon: 'handshake', route: '',
         //   listBreads: [{name: 'Услуги', route: ''}, {name: 'Проданные Услуги', route: ''}]

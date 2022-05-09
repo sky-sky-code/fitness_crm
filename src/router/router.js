@@ -10,6 +10,9 @@ import AddGymRoom from "@/pages/gymroom/AddGymRoom";
 import GymLesson from "@/pages/gymLesson/GymLesson";
 import GymLessonDetail from "@/pages/gymLesson/GymLessonDetail";
 import AddGymLesson from "@/pages/gymLesson/AddGymLesson";
+import Subscription from "@/pages/subscription/Subscription";
+import SubscriptionDetail from "@/pages/subscription/SubscriptionDetail";
+import AddSubscription from "@/pages/subscription/AddSubscription";
 
 const routes = [
     { path: '/office', component: Office },
@@ -23,6 +26,10 @@ const routes = [
     { path: '/gymlesson', component: GymLesson},
     { path: '/gymlesson/:uid', name: "GymLessonDetial", component: GymLessonDetail, props: true },
     { path: '/gymlesson/add', name: 'AddGymLesson', component: AddGymLesson},
+
+    { path: '/subscription', component: Subscription, name: "Subscription" },
+    { path: "/subscription/:uid", component: SubscriptionDetail, name: "SubscriptionDetail", props: true },
+    { path: "/subscription/add", component: AddSubscription, name: "AddSubscription" },
 ]
 
 const router = createRouter({
