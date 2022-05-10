@@ -22,10 +22,10 @@ export default {
         //   name: 'Занятия', icon: 'dumbbell',
         //   listBreads: [{name: 'Расписание Зала', route: ''}, {name: 'Расписание Тренера', route: ''}]
         // },
-        // {
-        //   name: 'Клиенты', icon: 'users',
-        //   listBreads: [{name: 'Клиенты', route: ''}]
-        // },
+        {
+          name: 'Клиенты', icon: 'users',
+          listBreads: [{name: 'Клиенты', route: '/client'}]
+        },
         {
           name: 'Абонемент', icon: 'list-check',
           listBreads: [{name: 'Абонименты', route: '/subscription'}]
@@ -106,6 +106,9 @@ export default {
   font-size: 16px;
 }
 
+.one_link:hover{
+  color: white;
+}
 
 
 </style>
