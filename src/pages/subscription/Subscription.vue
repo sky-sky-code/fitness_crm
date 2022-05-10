@@ -33,7 +33,8 @@ export default {
       try{
         let response = await axios.get(`http://127.0.0.1:8001/subscription`)
         response.data.forEach((item, index, array) =>{
-          item.gym_lesson = item.gym_lesson.type
+          let gym_lesson = `${item.gym_lesson.name} (${item.gym_lesson.type})`
+          item.gym_lesson = gym_lesson
         })
         this.dataSubscription = response.data
       }catch (e){
