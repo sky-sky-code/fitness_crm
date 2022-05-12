@@ -18,6 +18,7 @@ import AddSubscription from "@/pages/subscription/AddSubscription";
 import Client from "@/pages/client/Client";
 import ClientDetail from "@/pages/client/ClientDetail";
 import AddClient from "@/pages/client/AddClient";
+import ClientSubscription from "@/pages/client/ClientSubscription";
 
 const routes = [
     { path: '/office', component: Office },
@@ -38,6 +39,7 @@ const routes = [
 
     { path: '/client', component: Client, name: 'Client' },
     { path: '/client/:uid', component: ClientDetail, name: "ClientDetail", props: true },
+    { path: '/client/:uid/subscription', component: ClientSubscription, name: "ClientSubscription" },
     { path: '/client/add', component: AddClient, name: 'AddClient' },
 ]
 

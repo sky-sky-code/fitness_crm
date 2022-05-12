@@ -1,52 +1,52 @@
 <template>
   <div class="client">
-    <navbar class="nav">
-      <div class="client__nav">
-        <div class="nav__item">
-          Данные
-        </div>
-        <div class="nav__item">
-          Абонимент
-        </div>
-        <div class="nav__item">
-          Услуги
-        </div>
-      </div>
-    </navbar>
+    <div class="client__add">
+      <router-link to="">
+        <ButtonDark>
+          Добавить Клиента
+        </ButtonDark>
+      </router-link>
+    </div>
+    <TableOrange :dataTable="dataClient"
+                 :nameData="nameDataTable"
+                 :outputData="outputDataTable"
+                 :nameLink="nameDetail"/>
   </div>
 </template>
 
 <script>
+import ButtonDark from "@/components/UI/ButtonDark";
+import TableOrange from "@/components/UI/TableOrange";
+import axios from "axios";
 export default {
   name: "Client",
+  components: {ButtonDark, TableOrange},
+
   data(){
     return{
-
+      dataClient: [],
+      nameDataTable: ["Фамилия", "Имя", "Отчество", "Телефон", "email"],
+      outputDataTable: ["pat_name", "name", "surname", "phone", "email"],
+      nameDetail: "ClientDetail"
     }
+  },
+  methods: {
+    async getDataClient(){
+      try{
+        const response = await axios.get('https://127.0.0.1:80001/client')
+        this.dataClient = response.data
+      }catch (e){
+        console.log(e)
+      }
+    }
+  },
+  mounted() {
+    this.getDataClient()
   }
 }
 </script>
 
 <style scoped>
 
-.nav{
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-}
-
-.client__nav{
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav__item{
-  padding: 10px;
-  transition: all 0.2s;
-}
-
-.nav__item:hover{
-  background-color: #ef562f;
-  color: white;
-}
 
 </style>
