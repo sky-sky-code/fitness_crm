@@ -81,7 +81,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .formControl__item{
     display: flex;
     flex-direction: row;

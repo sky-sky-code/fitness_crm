@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .form{
     padding: 15px;
     margin-bottom: 20px;

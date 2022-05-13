@@ -33,8 +33,9 @@ export default {
   methods: {
     async getDataClient(){
       try{
-        const response = await axios.get('https://127.0.0.1:80001/client')
+        const response = await axios.get('http://127.0.0.1:8001/client')
         this.dataClient = response.data
+        console.log(this.dataClient)
       }catch (e){
         console.log(e)
       }
