@@ -1,7 +1,7 @@
 <template>
   <div class="client">
     <div class="client__add">
-      <router-link to="">
+      <router-link :to="{ name: 'AddClient' }">
         <ButtonDark>
           Добавить Клиента
         </ButtonDark>

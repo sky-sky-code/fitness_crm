@@ -33,6 +33,7 @@ export default {
   methods: {
     async createOffice(){
       try {
+        console.log(this.dataSave)
         await axios.post(this.urlSave, this.dataSave)
         this.error = false
         this.success = true

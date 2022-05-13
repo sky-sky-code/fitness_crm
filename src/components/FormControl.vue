@@ -1,8 +1,6 @@
 <template>
-  <div class="form">
-    <div class="form__item">
-      <slot></slot>
-    </div>
+  <div class="form flex-column">
+    <slot></slot>
     <FormSave :dataSave="dataSave" :urlSave="urlSave"/>
   </div>
 </template>
@@ -24,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-  .form__item{
+  .form{
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
