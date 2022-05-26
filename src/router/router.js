@@ -39,7 +39,7 @@ const routes = [
 
     { path: '/client', component: Client, name: 'Client' },
     { path: '/client/:uid', component: ClientDetail, name: "ClientDetail", props: true },
-    { path: '/client/:uid/subscription', component: ClientSubscription, name: "ClientSubscription" },
+    { path: '/client/:uid/subscription', component: ClientSubscription, name: "ClientSubscription", props: true },
     { path: '/client/add', component: AddClient, name: 'AddClient' },
 ]
 
