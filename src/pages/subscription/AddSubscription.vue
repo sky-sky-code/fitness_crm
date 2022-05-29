@@ -13,7 +13,7 @@
         <select v-model="dataSubscription.gym_lesson_id" class="form-select">
           <option v-for="selectGymLesson in dataSelectGymLesson"
                   :key="selectGymLesson.uid"
-                  :value="selectGymLesson.uid">{{ selectGymLesson.name }}</option>
+                  :value="selectGymLesson.uid">{{ selectGymLesson.name }} ({{ selectGymLesson.type }})</option>
         </select>
       </div>
       <div class="mb-3">
