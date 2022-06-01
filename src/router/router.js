@@ -20,6 +20,7 @@ import ClientDetail from "@/pages/client/ClientDetail";
 import AddClient from "@/pages/client/AddClient";
 import ClientSubscription from "@/pages/client/ClientSubscription";
 import ClientSubscriptionAdd from "@/pages/client/ClientSubscriptionAdd";
+import ClientSubscriptionDetail from "@/pages/client/ClientSubscriptionDetail";
 
 const routes = [
     { path: '/office', component: Office },
@@ -42,7 +43,8 @@ const routes = [
     { path: '/client/:uid', component: ClientDetail, name: "ClientDetail", props: true },
     { path: '/client/add', component: AddClient, name: 'AddClient' },
     { path: '/client/:uid/purchased/subscription', component: ClientSubscription, name: "ClientSubscription", props: true },
-    { path: '/client/:uid/purchased/subscription', component: ClientSubscriptionAdd, name: 'ClientSubscriptionAdd', props: true},
+    { path: '/client/:uid/purchased/subscription/add', component: ClientSubscriptionAdd, name: 'ClientSubscriptionAdd', props: true},
+    { path: '/client/purchased/subscription/:uid', component: ClientSubscriptionDetail, name: 'ClientSubscriptionDetail', props: true}
 ]
 
 const router = createRouter({

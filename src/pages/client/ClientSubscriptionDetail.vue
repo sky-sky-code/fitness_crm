@@ -1,5 +1,5 @@
 <template>
-  <FormControl :dataSave="dataPurchasedSubscription" :urlSave="urlSave">
+  <div class="clientSubscription_detail">
     <div class="mb-3">
       <label class="form-label">Дата Активации</label>
       <input type="date" v-model="dataPurchasedSubscription.date_activation" class="form-control"/>
@@ -24,15 +24,21 @@
       <label class="form-label">Цена, рублей</label>
       <input class="form-control" :value="price" type="number"/>
     </div>
-  </FormControl>
+    <div class="detail__button">
+      <ButtonRed @click="deleteSubscriptionDetail">Удалить</ButtonRed>
+    </div>
+  </div>
 </template>
 
+
 <script>
-import FormControl from "@/components/FormControl";
+import ButtonDark from "@/components/UI/ButtonDark";
+import ButtonRed from "@/components/UI/ButtonRed";
 import axios from "axios";
+import NavClient from "@/components/UI/navbar/NavClient";
 export default {
-  name: 'ClientSubscriptionAdd',
-  components: {FormControl},
+  name: 'ClientSubscriptionDetail',
+  components: {ButtonRed, ButtonDark, NavClient},
   props: ['uid'],
   data(){
     return{
@@ -41,13 +47,31 @@ export default {
         subscription_id: null,
         office_id: null,
       },
-      urlSave: `http://127.0.0.1:8001/client/${this.uid}/purchased/subscription`,
+      price: 0,
       subscriptionSelect: [],
       officeSelect: [],
-      price: 0,
+      client_uid: String
     }
   },
   methods: {
+    async getPurchasedSubscription(){
+      try{
+        let response = await axios.get(`http://127.0.0.1:8001/client/purchased/subscription/${this.$route.params.uid}`)
+        response.data['subscription_id'] = response.data['subscription']['uid']
+        response.data['office_id'] = response.data['office']['uid']
+        this.client_uid = response.data['client']['uid']
+        this.price = response.data['subscription']['price']
+        for(let key in response.data){
+            if (!(key in this.dataPurchasedSubscription)){
+              delete response.data[key]
+            }
+        }
+        this.dataPurchasedSubscription = response.data
+        console.log(this.dataPurchasedSubscription)
+      }catch (e){
+        console.log(e)
+      }
+    },
     async getSubscription(){
       try{
         let response = await axios.get('http://127.0.0.01:8001/subscription')
@@ -60,7 +84,6 @@ export default {
       try{
         let response = await axios.get(`http://127.0.0.01:8001/office`)
         this.officeSelect = response.data
-        console.log(this.officeSelect)
       }catch (e){
         console.log(e)
       }
@@ -72,11 +95,29 @@ export default {
       }catch (e){
         console.log(e)
       }
+    },
+    // async updateSubscriptionDetail(){
+    //   try{
+    //     await axios.put(`http://127.0.0.1:8001/client/purchased/subscription/${this.$route.params.uid}`,
+    //         this.dataPurchasedSubscription)
+    //     this.$router.push(`/client/${this.client_uid}/purchased/subscription`)
+    //   }catch (e){
+    //     console.log(e)
+    //   }
+    // },
+    async deleteSubscriptionDetail(){
+      try{
+        await axios.delete(`http://127.0.0.01:8001/client/purchased/subscription/${this.$route.params.uid}`)
+        this.$router.push(`/client/${this.client_uid}/purchased/subscription`)
+      }catch (e){
+        console.log(e)
+      }
     }
   },
   mounted() {
-    this.getSubscription()
+    this.getPurchasedSubscription()
     this.getOffice()
+    this.getSubscription()
   }
 }
 </script>

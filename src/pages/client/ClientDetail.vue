@@ -1,14 +1,6 @@
 <template>
   <div class="client_detail">
-    <navbar class="nav mb-3">
-      <div class="client__nav">
-        <div class="nav__item" v-for="item in navDataClient" :key="item">
-          <router-link :to="item.route">
-            {{ item.name }}
-          </router-link>
-        </div>
-      </div>
-    </navbar>
+    <NavClient/>
     <div class="form">
       <div class="formControlImage">
         <img src="https://www.clipartmax.com/png/full/427-4278400_phoenix-flag-clipart-beach-black-phoenix-logo-png.png" alt="">
@@ -78,25 +70,15 @@
 import axios from "axios";
 import ButtonRed from "@/components/UI/ButtonRed";
 import ButtonDark from "@/components/UI/ButtonDark";
+import NavClient from "@/components/UI/navbar/NavClient";
 export default {
   name: "ClientDetail",
   props: ['uid'],
-  components: {ButtonRed, ButtonDark},
+  components: {ButtonRed, ButtonDark, NavClient},
   data(){
     return{
       dataClient: {},
       subscriptionsClient: {},
-      navDataClient: [
-          {name: "Данные", route: {name: 'ClientDetail'}},
-          {
-            name: "Абонимент",
-            route: {
-              name: "ClientSubscription",
-              params: {subscriptionsClient: this.subscriptionsClient}
-            }
-          },
-          {name: "Услуги", route: {name: ""}}
-      ]
     }
   },
   methods:{
@@ -159,29 +141,5 @@ export default {
   width: 200px;
 }
 
-.nav{
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-}
-
-.client__nav{
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav__item{
-  padding: 10px;
-  transition: all 0.2s;
-  border-radius: 5px;
-}
-
-.nav__item:hover{
-  background-color: #ef562f;
-}
-
-.nav__item:hover a{
-  color: white !important;
-}
 
 </style>

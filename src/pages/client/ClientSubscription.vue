@@ -5,10 +5,12 @@
         <ButtonDark>Оформить абонимент</ButtonDark>
       </router-link>
     </div>
+    <NavClient class="mt-3"/>
     <TableOrange
-        :datatabel="dataClientSubscription"
+        :nameLink="nameDetail"
         :nameData="nameDataTable"
-        :outputData="outputDataTable" />
+        :outputData="outputDataTable"
+        :dataTable="dataClientSubscription"></TableOrange>
   </div>
 </template>
 
@@ -16,15 +18,17 @@
 import TableOrange from "@/components/UI/TableOrange";
 import axios from "axios";
 import ButtonDark from "@/components/UI/ButtonDark";
+import NavClient from "@/components/UI/navbar/NavClient";
 export default {
   name: "ClientSubscription",
   props: ['uid'],
-  components: {TableOrange, ButtonDark},
+  components: {TableOrange, ButtonDark, NavClient},
   data(){
     return{
       dataClientSubscription: [],
-      nameDataTable: ['Дата активации', 'Дата окончания', 'Абонимент', 'Направления', "Цена,рублей"],
-      outputDataTable: ["date_activation", "date_endings", "subscription", 'gym_lesson', 'price']
+      nameDataTable: ['Абонимент', 'Дата активации', 'Дата окончания', 'Направления', "Цена,рублей"],
+      outputDataTable: ["subscription", "date_activation", "date_endings", 'gym_lesson', 'price'],
+      nameDetail: 'ClientSubscriptionDetail'
     }
   },
   methods: {
@@ -34,8 +38,10 @@ export default {
         response.data.forEach(function (item, index, arr){
           let subscription = item['subscription']['name'] + `(${item['subscription']['gym_lesson']['type']})`
           let gym_lesson = item['subscription']['gym_lesson']['name']
+          let price = item['subscription']['price']
           item['subscription'] = subscription
           item['gym_lesson'] = gym_lesson
+          item['price'] = price
         });
         this.dataClientSubscription = response.data
         console.log(this.dataClientSubscription)
