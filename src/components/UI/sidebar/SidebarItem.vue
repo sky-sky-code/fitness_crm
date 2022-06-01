@@ -28,13 +28,12 @@ export default {
         },
         {
           name: 'Абонемент', icon: 'list-check',
-          listBreads: [{name: 'Абонименты', route: '/subscription'}]
-            // {name: 'Проданные Абонименты', route: ''}]
+          listBreads: [{name: 'Абонименты', route: '/subscription'}, {name: 'Оформленные', route: '/subscription/purchased'}]
         },
-        // {
-        //   name: 'Услуги', icon: 'handshake', route: '',
-        //   listBreads: [{name: 'Услуги', route: ''}, {name: 'Проданные Услуги', route: ''}]
-        // },
+        {
+          name: 'Услуги', icon: 'handshake', route: '',
+          listBreads: [{name: 'Услуги', route: ''}, {name: 'Проданные Услуги', route: ''}]
+        },
         {
           name: 'Фелиалы', icon: 'building',
           listBreads: [{name: 'Филиалы', route: '/office'}, {name: 'Залы', route: '/gymroom'}]

@@ -12,6 +12,7 @@ import GymLessonDetail from "@/pages/gymLesson/GymLessonDetail";
 import AddGymLesson from "@/pages/gymLesson/AddGymLesson";
 
 import Subscription from "@/pages/subscription/Subscription";
+import SubscriptionPurchased from "@/pages/subscription/SubscriptionPurchased";
 import SubscriptionDetail from "@/pages/subscription/SubscriptionDetail";
 import AddSubscription from "@/pages/subscription/AddSubscription";
 
@@ -36,6 +37,7 @@ const routes = [
     { path: '/gymlesson/add', name: 'AddGymLesson', component: AddGymLesson},
 
     { path: '/subscription', component: Subscription, name: "Subscription" },
+    { path: '/subscription/purchased', component: SubscriptionPurchased, name: 'SubscriptionPurchased' },
     { path: "/subscription/:uid", component: SubscriptionDetail, name: "SubscriptionDetail", props: true },
     { path: "/subscription/add", component: AddSubscription, name: "AddSubscription" },
 
