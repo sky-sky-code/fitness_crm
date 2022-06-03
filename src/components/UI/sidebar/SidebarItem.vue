@@ -32,7 +32,7 @@ export default {
         },
         {
           name: 'Услуги', icon: 'handshake', route: '',
-          listBreads: [{name: 'Услуги', route: ''}, {name: 'Проданные Услуги', route: ''}]
+          listBreads: [{name: 'Услуги', route: '/service'}, {name: 'Проданные Услуги', route: ''}]
         },
         {
           name: 'Фелиалы', icon: 'building',

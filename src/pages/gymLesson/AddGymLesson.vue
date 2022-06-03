@@ -13,7 +13,7 @@
       </select>
     </div>
     <div class="mb-3">
-      <label for="time">Время: </label>
+      <label for="time">Продолжительость: </label>
       <br>
       <input v-model="dataGymLesson.duration" type="time" id="time" name="time"/>
     </div>
