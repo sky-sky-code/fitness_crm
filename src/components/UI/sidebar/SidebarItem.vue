@@ -18,10 +18,10 @@ export default {
   data() {
     return {
       menuItem: [
-        // {
-        //   name: 'Занятия', icon: 'dumbbell',
-        //   listBreads: [{name: 'Расписание Зала', route: ''}, {name: 'Расписание Тренера', route: ''}]
-        // },
+        {
+          name: 'Занятия', icon: 'dumbbell',
+          listBreads: [{name: 'Расписание Зала', route: ''}, {name: 'Расписание Тренера', route: ''}]
+        },
         {
           name: 'Клиенты', icon: 'users',
           listBreads: [{name: 'Клиенты', route: '/client'}]
@@ -42,18 +42,14 @@ export default {
           name: 'Напрвления', icon: 'signs-post',
           listBreads: [{name: 'направления', route: '/gymlesson'}]
         },
-        // {
-        //   name: 'Персонал', icon: 'user',
-        //   listBreads: [{name: 'Тренеры', route: ''}, {name: 'График тренеров'}, {name: 'Администраторы', route: ''}]
-        // },
-        // {
-        //   name: 'Отчет', icon: 'chart-column',
-        //   listBreads: [{name: 'Выручка', route: ''}, {name: 'Текущие Абонименты', route: ''}]
-        // },
-        // {
-        //   name: 'Задачи', icon: 'check',
-        //   listBreads: [{name: 'Задачи', route: ''}, {name: 'Задачи Клиентов', route: ''}]
-        // }
+        {
+          name: 'Персонал', icon: 'user',
+          listBreads: [{name: 'Тренеры', route: ''}, {name: 'График тренеров', route: ''}, {name: 'Администраторы', route: ''}]
+        },
+        {
+          name: 'Отчет', icon: 'chart-column',
+          listBreads: [{name: 'Выручка', route: ''}, {name: 'Текущие Абонименты', route: ''}]
+        }
       ]
     };
   }

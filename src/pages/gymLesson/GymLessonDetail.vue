@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="gymlesson__detial">
+    <div class="form">
       <div class="mb-3 detail__item">
         <label class="form-label">Название</label>
         <input type="text" v-model="dataGymLesson.name" class="form-control">

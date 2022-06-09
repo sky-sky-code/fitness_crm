@@ -21,12 +21,11 @@ import axios from "axios";
 export default {
   name: "Client",
   components: {ButtonDark, TableOrange},
-
   data(){
     return{
       dataClient: [],
       nameDataTable: ["Фамилия", "Имя", "Отчество", "Телефон", "email"],
-      outputDataTable: ["pat_name", "name", "surname", "phone", "email"],
+      outputDataTable: ["surname", "name", "pat_name", "phone", "email"],
       nameDetail: "ClientDetail"
     }
   },

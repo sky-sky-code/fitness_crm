@@ -18,7 +18,7 @@ export default {
       navDataClient: [
         {name: "Данные", route: {name: 'ClientDetail'}},
         {
-          name: "Абонимент",
+          name: "Абонемент",
           route: {
             name: "ClientSubscription",
             params: {subscriptionsClient: this.subscriptionsClient}
