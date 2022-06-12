@@ -1,4 +1,5 @@
 <template>
+  <h1>Все Купленные Абонементы</h1>
   <TableOrange
       :dataTable="dataPurchasedSubscription"
       :nameData="nameDataTable"

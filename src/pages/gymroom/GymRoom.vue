@@ -1,5 +1,6 @@
 <template>
   <div class="gymroom">
+    <h1>Залы</h1>
       <div class="gymroom_add">
         <router-link :to="{name: 'AddGymRoom'}">
           <ButtonDark>Добавить Зал</ButtonDark>

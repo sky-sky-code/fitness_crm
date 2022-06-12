@@ -1,5 +1,6 @@
 <template>
   <div class="clientSub">
+    <h1>Абонементы Клиента</h1>
     <div class="add_clientSub">
       <router-link :to="{name: 'ClientSubscriptionAdd'}">
         <ButtonDark>Оформить абонимент</ButtonDark>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <h1>Данные Зала</h1>
     <div class="office__detail">
       <div class="mb-3 detail__item">
         <label class="form-label">Название</label>
@@ -23,7 +23,6 @@
         <ButtonRed @click="deleteDetailGymRoom">Удалить</ButtonRed>
       </div>
     </div>
-  </div>
 </template>
 
 <script>

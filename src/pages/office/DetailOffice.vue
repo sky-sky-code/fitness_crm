@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <h1>Данные Оффиса</h1>
     <div class="office__detail">
     <div class="mb-3 detail__item">
       <label class="form-label">Названия</label>
@@ -17,7 +17,6 @@
       <ButtonDark @click="updateDetailOffice">Сохранить</ButtonDark>
       <ButtonRed @click="deleteDetailOffice">Удалить</ButtonRed>
     </div>
-  </div>
   </div>
 </template>
 

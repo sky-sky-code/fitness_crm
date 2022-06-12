@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <h1>Данные Абонемента</h1>
     <div class="mb-3">
       <label class="form-label">Название</label>
       <input type="text" v-model="dataSubscription.name" class="form-control"  placeholder="Введите навазние Абонимента">
@@ -35,7 +35,6 @@
       <ButtonDark @click="updateDetailSubscription">Сохранить</ButtonDark>
       <ButtonRed @click="deleteDetailSubscription">Удалить</ButtonRed>
     </div>
-  </div>
 </template>
 
 <script>

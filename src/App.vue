@@ -67,6 +67,7 @@ ul li{
 .app{
   width: 100%;
   display: flex;
+  font-family: 'Roboto', sans-serif;
 }
 
 .section{

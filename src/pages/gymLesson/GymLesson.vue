@@ -1,5 +1,6 @@
 <template>
   <div class="gymLesson">
+    <h1>Направления</h1>
     <div class="gymLesson_add">
       <router-link :to="{name: 'AddGymLesson'}">
         <ButtonDark>Добавить Направление</ButtonDark>

@@ -1,4 +1,5 @@
 <template>
+  <h1>Оформление Абонемента</h1>
   <FormControl :dataSave="dataPurchasedSubscription" :urlSave="urlSave">
     <div class="mb-3">
       <label class="form-label">Дата Активации</label>

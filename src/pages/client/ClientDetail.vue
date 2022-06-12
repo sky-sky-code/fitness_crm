@@ -1,5 +1,6 @@
 <template>
   <div class="client_detail">
+    <h1>Данные Клиента</h1>
     <NavClient/>
     <div class="form">
       <div class="formControlImage">

@@ -1,4 +1,5 @@
 <template>
+  <h1>Добавление Оффиса</h1>
   <FormControl :dataSave="dataOffice" :urlSave="urlSave">
     <div class="form__name">
       <label class="form-label">Название</label>

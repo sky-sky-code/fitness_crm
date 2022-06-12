@@ -1,5 +1,6 @@
 <template>
   <div class="client">
+    <h1 class="title">Клиенты</h1>
     <div class="client__add">
       <router-link :to="{ name: 'AddClient' }">
         <ButtonDark>

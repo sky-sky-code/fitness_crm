@@ -48,7 +48,7 @@ export default {
         },
         {
           name: 'Отчет', icon: 'chart-column',
-          listBreads: [{name: 'Выручка', route: ''}, {name: 'Текущие Абонименты', route: ''}]
+          listBreads: [{name: 'Выручка', route: '/revenue'}, {name: 'Текущие Абонименты', route: ''}]
         }
       ]
     };

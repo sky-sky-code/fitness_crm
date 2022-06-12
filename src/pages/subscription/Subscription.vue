@@ -1,4 +1,5 @@
 <template>
+  <h1>Абонемент</h1>
   <div class="subscription">
     <div class="subscription__add">
       <router-link :to="{name: 'AddSubscription'}">

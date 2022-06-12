@@ -1,8 +1,9 @@
 <template>
+  <h1>Услуги</h1>
   <div class="subscription">
     <div class="subscription__add">
       <router-link :to="{name: 'ServiceAdd'}">
-        <ButtonDark>Добавить Сервис</ButtonDark>
+        <ButtonDark>Добавить Услугу</ButtonDark>
       </router-link>
     </div>
     <TableOrange

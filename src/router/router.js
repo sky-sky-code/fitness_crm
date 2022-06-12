@@ -26,6 +26,7 @@ import ClientSubscriptionDetail from "@/pages/client/ClientSubscriptionDetail";
 import Service from "@/pages/service/Service";
 import ServiceDetail from "@/pages/service/ServiceDetail";
 import ServiceAdd from "@/pages/service/ServiceAdd";
+import Revenue from "@/pages/reports/Revenue";
 
 const routes = [
     { path: '/office', component: Office },
@@ -54,7 +55,9 @@ const routes = [
 
     { path: '/service', component: Service, name: 'Service'},
     { path: '/service/:uid', component: ServiceDetail, name: 'ServiceDetail', props: true},
-    { path: '/service/add', component: ServiceAdd, name: 'ServiceAdd' }
+    { path: '/service/add', component: ServiceAdd, name: 'ServiceAdd' },
+
+    { path: '/revenue', component: Revenue, name: 'Revenue'}
 ]
 
 const router = createRouter({

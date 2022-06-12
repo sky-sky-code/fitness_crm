@@ -1,4 +1,5 @@
 <template>
+  <h1>Добавление Клиента</h1>
   <FormControl :dataSave="dataClient" :urlSave="urlSave">
     <div class="formControl__item mb-3">
       <div>

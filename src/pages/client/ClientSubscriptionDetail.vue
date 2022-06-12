@@ -1,5 +1,6 @@
 <template>
   <div class="clientSubscription_detail">
+    <h1>Данные Абонемента</h1>
     <div class="mb-3">
       <label class="form-label">Дата Активации</label>
       <input type="date" v-model="dataPurchasedSubscription.date_activation" class="form-control"/>

@@ -1,4 +1,5 @@
 <template>
+  <h1>Оффисы</h1>
   <div class="office">
     <div class="office__add">
       <router-link to="/office/add">

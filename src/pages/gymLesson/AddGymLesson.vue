@@ -1,4 +1,5 @@
 <template>
+  <h1>Добавление Направления</h1>
   <FormControl :dataSave="dataGymLesson" :urlSave="urlSave">
     <div class="mb-3">
       <label  class="form-label">Название</label>

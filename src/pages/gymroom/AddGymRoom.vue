@@ -1,4 +1,5 @@
 <template>
+  <h1>Добавление Зала</h1>
   <FormControl :dataSave="dataGymRoom" :urlSave="urlSave">
     <div class="mb-3">
       <label  class="form-label">Название</label>

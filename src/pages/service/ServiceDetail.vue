@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <h1>Данные об Услуге</h1>
     <div class="mb-3">
       <label class="form-label">Название</label>
       <input class="form-control" v-model="dataService.name" type="text"/>
@@ -19,7 +19,6 @@
       <ButtonDark @click="updateService">Сохранить</ButtonDark>
       <ButtonRed @click="deleteService">Удалить</ButtonRed>
     </div>
-  </div>
 </template>
 
 <script>
