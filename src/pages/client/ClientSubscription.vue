@@ -17,9 +17,9 @@
 
 <script>
 import TableOrange from "@/components/UI/TableOrange";
-import axios from "axios";
 import ButtonDark from "@/components/UI/ButtonDark";
 import NavClient from "@/components/UI/navbar/NavClient";
+import axios from "axios";
 export default {
   name: "ClientSubscription",
   props: ['uid'],
